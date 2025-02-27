@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+  <remote name="elab"
+          fetch="https://github.com/electrolaboratory" />
+
+        <!-- Sync trees -->
+        <project path="device/asus/X00TD" name="device" remote="elab" revision="vic" />
+
+</manifest>

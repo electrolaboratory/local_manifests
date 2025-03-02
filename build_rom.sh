@@ -15,6 +15,8 @@ else
 fi
 
 . build/envsetup.sh
+gk -s
 axion X00TD
 axion X00TD va
-ax
+make installclean
+ax -j$(nproc --all)

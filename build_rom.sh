@@ -15,8 +15,7 @@ else
 fi
 
 . build/envsetup.sh
+breakfast X00TD userdebug
 gk -s
-axion X00TD
-axion X00TD va
 make installclean
-ax -j$(nproc --all)
+mka bacon

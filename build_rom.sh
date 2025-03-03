@@ -14,12 +14,12 @@ echo -e "$blue***********************************************"
 echo -e "         FOSS the TOP free server! Always TOP!       "
 echo -e "**********************************************$nocol"
 
-rm -rf .repo/manifests
+rm -rf .repo/local_manifests/
 repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 git clone --depth=1 https://github.com/electrolaboratory/local_manifests -b main .repo/local_manifests
 /opt/crave/resync.sh
 . build/envsetup.sh
 lunch lineage_X00TD-ap4a-userdebug
 export TZ=Asia/Jakarta
-m installclean
+make installclean
 m evolution

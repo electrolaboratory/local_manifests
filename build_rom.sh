@@ -16,5 +16,6 @@ fi
 
 . build/envsetup.sh
 lunch lineage_X00TD-ap4a-userdebug
+gk -s
 make installclean
 mka bacon

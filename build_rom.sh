@@ -7,7 +7,7 @@ export TZ=Asia/Jakarta
 sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 rm -rf .repo/local_manifests/
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectMatrixx/android -b 15.0 -g default,-mips,-darwin,-notdefault
 git clone --depth=1 https://github.com/electrolaboratory/local_manifests -b main .repo/local_manifests
 
 if [ -f /usr/bin/resync ]; then
@@ -17,6 +17,4 @@ else
 fi
 
 . build/envsetup.sh
-lunch infinity_X00TD-userdebug
-make installclean
-mka bacon
+brunch X00TD

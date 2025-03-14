@@ -4,10 +4,9 @@ export BUILD_USERNAME="queen"
 export BUILD_HOSTNAME="foss-crave"
 
 export TZ=Asia/Jakarta
-sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 rm -rf .repo/local_manifests/
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectMatrixx/android -b 15.0 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 git clone --depth=1 https://github.com/electrolaboratory/local_manifests -b main .repo/local_manifests
 
 if [ -f /usr/bin/resync ]; then
@@ -17,4 +16,5 @@ else
 fi
 
 . build/envsetup.sh
+make installclean
 brunch X00TD

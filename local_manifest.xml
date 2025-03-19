@@ -6,6 +6,6 @@
           fetch="https://github.com/electrolaboratory" />
 
         <!-- Sync trees -->
-        <project path="device/asus/X00TD" name="device" remote="elab" revision="matrixx" />
+        <project path="device/asus/X00TD" name="device" remote="elab" revision="alpha" />
 
 </manifest>
